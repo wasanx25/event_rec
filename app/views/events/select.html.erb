@@ -1,0 +1,5 @@
+<% @events.parsed_response['events'].each do |event| %>
+	<%= event['title'] %>
+	<%= event['event_url'] %>
+	<%= event['description'] %>
+<% end %>

@@ -1,0 +1,6 @@
+<% @items.each do |item| %>
+	<p style='margin-top: 30px;'>item: <%= item.name %></p>
+	<p>desc: <%= item.description %></p>
+	<p><%= link_to "削除", item_path(item), method: :delete %></p>
+<% end %>
+<%= link_to "新規アイテム作成", new_item_path %>
