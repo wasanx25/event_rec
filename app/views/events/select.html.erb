@@ -1,5 +1,10 @@
 <% @events.parsed_response['events'].each do |event| %>
 	<%= event['title'] %>
 	<%= event['event_url'] %>
-	<%= event['description'] %>
 <% end %>
+
+<% if user_signed_in? %>
+	<li>ログインしています</li>
+<% end %>
+
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => 'btn btn-primary' %>
