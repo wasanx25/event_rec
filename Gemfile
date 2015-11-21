@@ -53,4 +53,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'slim-rails'
+  gem 'jquery-ui-rails'
+  gem 'angular-rails-engine'
 end
+

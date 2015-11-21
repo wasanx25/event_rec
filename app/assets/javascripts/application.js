@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery-ui/sortable
+//= require angular/angular
+//= require angular/angular-resource

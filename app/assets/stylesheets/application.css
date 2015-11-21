@@ -11,3 +11,18 @@
  *= require_self
  *= require_tree .
  */
+
+#main {
+}
+
+#footer {
+  background-color: #aaa;
+}
+
+#footer p {
+  margin: 0;
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+  font-size: 12px;
+}

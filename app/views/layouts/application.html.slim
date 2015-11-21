@@ -1,5 +1,5 @@
 doctype html
-html
+html ng-app=''
   head
     title EventRec
     link href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" rel="stylesheet" type="text/css" /
@@ -8,7 +8,7 @@ html
     link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" /
     script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" 
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true 
-    = javascript_include_tag "avbar-fixed-toppplication", "data-turbolinks-track" => true 
+    = javascript_include_tag "application", "data-turbolinks-track" => true 
     = csrf_meta_tags 
   body
     #header.navbar.navbar-default
@@ -22,9 +22,12 @@ html
             a< href='/events/new' イベント検索
           li
             - if user_signed_in?
-              = link_to "ログアウト", user_sign_out_path, method: :delete
+              = link_to "ログアウト", users_sign_out_path, method: :delete
             - else
               a< href='/users/sign_in' ログイン
     #main.container
       = yield
-    #footer.container
+    #footer
+      .container
+        p
+          | copyright きくちわたる
