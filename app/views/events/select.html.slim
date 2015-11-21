@@ -1,8 +1,0 @@
-#panel_box
-  ul#sort_content.sort_table
-    - @events.parsed_response['events'].each do |event|
-      li.panel.panel-default
-        p
-          = event['title']
-        p
-          = event['event_url']

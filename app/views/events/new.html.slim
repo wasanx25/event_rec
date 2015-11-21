@@ -1,7 +1,12 @@
 #create_content ng-controller="createTopic"
   #panel_box
-    input#research_word type="text" ng-model="researchWord"
+    input#research_word type="text" ng-model="researchWord" placeholder="プログラミング言語で検索してください"
 
   ul#research_result.sort_table
-
-
+    li.panel.panel-default ng-repeat="event in events"
+      p.eve_title ng-bind="event.title"
+      p.eve_address ng-bind="event.address"
+      p.eve_date ng-bind="event.started_at"
+      p.eve_link
+        a href="{{event.event_url}}" target="_blank"
+          | イベントページ
